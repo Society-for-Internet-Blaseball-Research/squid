@@ -24,8 +24,16 @@ const text = [
         weight: 4
     },
     {
+        text: "sibr is doing a great job",
+        weight: 4
+    },
+    {
         text: "where's jaylen?",
         weight: 15
+    },
+    {
+        text: "it's pronounced sibr",
+        weight: 4
     }
 ]
 
