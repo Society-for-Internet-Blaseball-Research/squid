@@ -34,6 +34,10 @@ const text = [
     {
         text: "it's pronounced sibr",
         weight: 4
+    },
+    {
+        text: "these eggs are yum",
+        weight: 15
     }
 ]
 
