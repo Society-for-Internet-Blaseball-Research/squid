@@ -38,6 +38,18 @@ const text = [
     {
         text: "these eggs are yum",
         weight: 15
+    },
+    {
+        text: "you look like a snack",
+        weight: 12
+    },
+    {
+        text: "*cronch*",
+        weight: 15
+    },
+    {
+        text: "are you holding out on me",
+        weight: 10
     }
 ]
 
