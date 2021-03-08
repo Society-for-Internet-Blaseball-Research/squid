@@ -50,29 +50,33 @@ const text = [
     {
         text: "are you holding out on me",
         weight: 10
-    }
-]
+    },
+    {
+        text: "pretzels got wet",
+        weight: 10
+    },
+];
 
-let textArray = []
+const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).flat();
 
-function createWeightedArray(){
-    for (const item in text) {
-        if (text.hasOwnProperty(item)) {
-            const data = text[item];
-            for (let index = 0; index < data.weight; index++) {
-                textArray.push(data.text);
-            }
+function onLoad() {
+    const hatType = (new URLSearchParams(window.location.search)).get('hat');
+    if (hatType === 'chef') {
+        const floaty = document.querySelector(".floaty");
+        if (!floaty.src.includes('squid-hat.png')) {
+            floaty.src = 'squid-hat.png';
+            return;
         }
     }
-    // console.log(textArray)
+    setText();
 }
 
-function setText(){
+function setText() {
     // console.log("Set Text");
-    let rand = (Math.floor(Math.random() * 180) + 30)*1000;
+    document.querySelector(".text").innerHTML = textArray[
+        Math.floor(Math.random() * textArray.length)
+    ];
+    const rand = (Math.floor(Math.random() * 180) + 30) * 1000;
     // console.log(rand);
-    document.querySelector(".text").innerHTML = textArray[Math.floor(Math.random()*textArray.length)];
     setTimeout(setText, rand);
 }
-
-createWeightedArray()
