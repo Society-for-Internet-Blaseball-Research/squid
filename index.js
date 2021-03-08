@@ -65,6 +65,7 @@ function onLoad() {
         const floaty = document.querySelector(".floaty");
         if (!floaty.src.includes('squid-hat.png')) {
             floaty.src = 'squid-hat.png';
+            floaty.alt = "A giant squid, adorned with a chef's hat, floating ominously on the page";
             return;
         }
     }
