@@ -55,26 +55,41 @@ const text = [
         text: "pretzels got wet",
         weight: 10
     },
+    {
+        text: "Blaseball is a mess.",
+        weight: 10
+    },
 ];
 
 const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).flat();
 
 function onLoad() {
-    const hatType = (new URLSearchParams(window.location.search)).get('hat');
-    if (hatType === 'chef') {
-        const floaty = document.querySelector(".floaty");
-        if (!floaty.src.includes('squid-hat.png')) {
-            floaty.src = 'squid-hat.png';
-            floaty.alt = "A giant squid, adorned with a chef's hat, floating ominously on the page";
-            return;
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type') || params.get('hat');
+    if (type === 'coin') {
+        document.querySelector(".content").className = "content coin";
+    } else {
+        document.querySelector(".content").className = "content squid";
+        if (type === 'chef') {
+            const floaty = document.querySelector(".floaty");
+            if (!floaty.src.includes('squid-hat.png')) {
+                floaty.src = 'squid-hat.png';
+                floaty.alt = "A giant squid, adorned with a chef's hat, floating ominously on the page";
+                return;
+            }
         }
     }
-    setText();
+    const text = params.get('text');
+    if (text) {
+        document.querySelector(".text").textContent = text;
+    } else {
+        setText();
+    }
 }
 
 function setText() {
     // console.log("Set Text");
-    document.querySelector(".text").innerHTML = textArray[
+    document.querySelector(".text").textContent = textArray[
         Math.floor(Math.random() * textArray.length)
     ];
     const rand = (Math.floor(Math.random() * 180) + 30) * 1000;
