@@ -6,10 +6,7 @@ body {
 
 body {
     background-color: black;
-    color: rgb(89, 136, 255);
     text-align: center;
-    text-shadow:0 0 20px #5988ff;
-    font-size:32px;
     font-family:"Lora","Courier New",monospace,serif;
     font-weight:700;
 }
@@ -25,6 +22,11 @@ body {
 
 
 .floaty {
+    display: none;
+}
+
+.squid .floaty {
+    display: revert;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     -webkit-animation-name: floaty-ticket;
@@ -53,4 +55,32 @@ body {
     0% {
         transform: translateY(10px);
     }
+}
+
+.squid .text {
+    color: rgb(89, 136, 255);
+    text-shadow:0 0 20px #5988ff;
+    font-size:32px;
+}
+
+.icon {
+    display: none;
+}
+
+.coin .icon {
+  display: revert;
+  width: 48vh;
+  height: 48vh;
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  margin: auto;
+  max-width: 80vw;
+}
+
+.coin .text {
+  color: #ffbe00;
+  line-height: 1.2em;
+  font-size: 30px;
 }
