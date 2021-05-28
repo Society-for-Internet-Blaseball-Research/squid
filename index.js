@@ -76,6 +76,11 @@ const hats = {
     src: 'giant-squid.svg',
     alt: "A giant squid, floating ominously on the page",
     title: "Giant Squid by Delapouite at game-icons.net"
+  },
+  'ballclark': {
+    src: 'ballclark.png',
+    alt: 'An angry bbaseball, floating ominously on the page',
+    title: "Ball Clark by Quinns at People Make Games"
   }
 };
 
