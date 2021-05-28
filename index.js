@@ -61,22 +61,44 @@ const text = [
     },
 ];
 
+const hats = {
+  'chef': {
+    src: 'squid-hat.png',
+    alt: "A giant squid, adorned with a chef's hat, floating ominously on the page",
+    title: "The Monitor from Blaseball.com"
+  },
+  'fedora': {
+    src: 'fedora-squid.svg',
+    alt: "A giant squid, adorned with a fedora, floating ominously on the page",
+    title: "Giant Squid by Delapouite, Fedora by Lorc; game-icons.net"
+  },
+  'default': {
+    src: 'giant-squid.svg',
+    alt: "A giant squid, floating ominously on the page",
+    title: "Giant Squid by Delapouite at game-icons.net"
+  },
+  'ballclark': {
+    src: 'ballclark.png',
+    alt: 'An angry bbaseball, floating ominously on the page',
+    title: "Ball Clark by Quinns at People Make Games"
+  }
+};
+
 const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).flat();
 
 function onLoad() {
     const params = new URLSearchParams(window.location.search);
-    const type = params.get('type') || params.get('hat');
+    const type = params.get('type') || params.get('hat') || 'default';
     if (type === 'coin') {
         document.querySelector(".content").className = "content coin";
     } else {
         document.querySelector(".content").className = "content squid";
-        if (type === 'chef') {
-            const floaty = document.querySelector(".floaty");
-            if (!floaty.src.includes('squid-hat.png')) {
-                floaty.src = 'squid-hat.png';
-                floaty.alt = "A giant squid, adorned with a chef's hat, floating ominously on the page";
-                return;
-            }
+        const floaty = document.querySelector(".floaty");
+        const hat = hats[type];
+        if (!floaty.src.includes(hat.src)) {
+            floaty.src = hat.src;
+            floaty.alt = hat.alt;
+            floaty.title = hat.title;
         }
     }
     const text = params.get('text');
