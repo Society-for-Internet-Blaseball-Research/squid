@@ -59,6 +59,10 @@ const text = [
         text: "Blaseball is a mess.",
         weight: 10
     },
+    {
+        text: "also who are the data witches",
+        weight: 10
+    },
 ];
 
 const hats = {
