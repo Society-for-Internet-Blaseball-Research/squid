@@ -85,7 +85,7 @@ const hats = {
     src: 'ballclark.png',
     alt: 'An angry bbaseball, floating ominously on the page',
     title: "Ball Clark by Quinns at People Make Games"
-  }
+  },
   'sunglasses': {
     src: 'sunglasses-squid.png',
     alt: 'A giant squid, adorned with sunglasses, floating ominously on the page',
