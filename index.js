@@ -86,6 +86,11 @@ const hats = {
     alt: 'An angry bbaseball, floating ominously on the page',
     title: "Ball Clark by Quinns at People Make Games"
   }
+  'sunglasses': {
+    src: 'sunglasses-squid.png',
+    alt: 'A giant squid, adorned with sunglasses, floating ominously on the page',
+    title: "The Monitor with sunglasses from Blaseball.com"
+  }
 };
 
 const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).flat();
