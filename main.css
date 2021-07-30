@@ -67,19 +67,31 @@ body {
     display: none;
 }
 
-.coin .icon {
+.coin .icon,
+.scattered .icon {
   display: revert;
   width: 48vh;
   height: 48vh;
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
   margin: auto;
   max-width: 80vw;
 }
 
-.coin .text {
+.coin .icon {
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+
+.scattered .icon {
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/-quit-.7b42c9fb.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+
+.coin .text,
+.scattered .text {
   color: #ffbe00;
   line-height: 1.2em;
   font-size: 48px;

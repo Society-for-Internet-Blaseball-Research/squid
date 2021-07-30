@@ -98,8 +98,8 @@ const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).fla
 function onLoad() {
     const params = new URLSearchParams(window.location.search);
     const type = params.get('type') || params.get('hat') || 'default';
-    if (type === 'coin') {
-        document.querySelector(".content").className = "content coin";
+    if (type === 'coin' || type === 'scattered') {
+        document.querySelector(".content").className = "content " + type;
     } else {
         document.querySelector(".content").className = "content squid";
         const floaty = document.querySelector(".floaty");
