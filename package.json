@@ -1,0 +1,25 @@
+{
+  "name": "squid.sibr.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Society-for-Internet-Blaseball-Research/squid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Society-for-Internet-Blaseball-Research/squid/issues"
+  },
+  "homepage": "https://github.com/Society-for-Internet-Blaseball-Research/squid#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "liquidjs": "^9.32.0"
+  }
+}
