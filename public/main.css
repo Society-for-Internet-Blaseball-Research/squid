@@ -22,10 +22,6 @@ body {
 
 
 .floaty {
-    display: none;
-}
-
-.squid .floaty {
     display: revert;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
@@ -74,20 +70,6 @@ body {
   height: 48vh;
   margin: auto;
   max-width: 80vw;
-}
-
-.coin .icon {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
-}
-
-.scattered .icon {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/-quit-.7b42c9fb.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
 }
 
 .coin .text,

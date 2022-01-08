@@ -10,17 +10,18 @@
     <meta property="og:site_name" content="SIBR">
     <meta property="twitter:title" content="The Hall Monitor">
     <meta property="og:title" content="The Hall Monitor">
-    <meta property="twitter:description" content="Take some deep breaths with your friend">
-    <meta property="og:description" content="Take some deep breaths with your friend">
-    <meta property="description" content="Take some deep breaths with your friend">
+    <meta property="twitter:description" content="{{text}}">
+    <meta property="og:description" content="{{text}}">
+    <meta property="description" content="{{text}}">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="normalize.css">
-    <script src="breathe.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+    <script src="index.js"></script>
 </head>
 <body>
-    <div class="content">
-        <img class=floaty onload="setText()" src="giant-squid.svg" title="Giant Squid by Delapouite at game-icons.net" alt="A Giant squid, floating ominously on the page">
-        <p class=text></p>
+    <div class="content {{type}}">
+        <img class="floaty {{type}}" {%unless text%}onload="setText()"{%endunless%} src="{{src}}" title="{{title}}" alt="{{alt}}">
+        <p class="text {{type}}">{{text}}</p>
     </div>
 </body>
 </html>
