@@ -69,28 +69,57 @@ const hats = {
   'chef': {
     src: 'squid-hat.png',
     alt: "A giant squid, adorned with a chef's hat, floating ominously on the page",
-    title: "The Monitor from Blaseball.com"
+    title: "The Monitor from Blaseball.com",
+	contentType: 'squid'
   },
   'fedora': {
     src: 'fedora-squid.svg',
     alt: "A giant squid, adorned with a fedora, floating ominously on the page",
-    title: "Giant Squid by Delapouite, Fedora by Lorc; game-icons.net"
+    title: "Giant Squid by Delapouite, Fedora by Lorc; game-icons.net",
+	contentType: 'squid'
   },
   'default': {
     src: 'giant-squid.svg',
     alt: "A giant squid, floating ominously on the page",
-    title: "Giant Squid by Delapouite at game-icons.net"
+    title: "Giant Squid by Delapouite at game-icons.net",
+	contentType: 'squid'
   },
   'ballclark': {
     src: 'ballclark.png',
     alt: 'An angry bbaseball, floating ominously on the page',
-    title: "Ball Clark by Quinns at People Make Games"
+    title: "Ball Clark by Quinns at People Make Games",
+	contentType: 'squid'
   },
   'sunglasses': {
     src: 'sunglasses-squid.png',
     alt: 'A giant squid, adorned with sunglasses, floating ominously on the page',
-    title: "The Monitor with sunglasses from Blaseball.com"
-  }
+    title: "The Monitor with sunglasses from Blaseball.com",
+	contentType: 'squid'
+  },
+  'coin': {
+	contentType: 'coin'
+  },
+  'scattered': {
+	contentType: 'scattered'  
+  },
+  'shelled-one': {
+    src: 'peanut.svg',
+    alt: 'A giant peanut, spinning ominously on the page',
+    title: 'Peanut by rihlsul at game-icons.net',
+	contentType: 'shelled-one'
+  },
+  'shelled-two': {
+    src: 'peanut.png',
+    alt: 'Spinning peanut',
+    title: 'Peanut from Blaseball.com',
+	contentType: 'shelled-two'
+  },
+  'tutorial': {
+    src: 'peanut.png',
+    alt: 'Spinning peanut',
+    title: 'Peanut from Blaseball.com',
+	contentType: 'tutorial'
+  },
 };
 
 const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).flat();
@@ -98,18 +127,19 @@ const textArray = text.map(saying => Array(saying.weight).fill(saying.text)).fla
 function onLoad() {
     const params = new URLSearchParams(window.location.search);
     const type = params.get('type') || params.get('hat') || 'default';
-    if (type === 'coin' || type === 'scattered') {
-        document.querySelector(".content").className = "content " + type;
-    } else {
-        document.querySelector(".content").className = "content squid";
-        const floaty = document.querySelector(".floaty");
-        const hat = hats[type];
-        if (!floaty.src.includes(hat.src)) {
-            floaty.src = hat.src;
-            floaty.alt = hat.alt;
-            floaty.title = hat.title;
-        }
+	const hat = hats[type] || hats['default'];
+	const floaty = document.querySelector(".floaty");
+	document.querySelector(".content").className = "content " + hat.contentType;
+	
+    if (hat.src && !floaty.src.includes(hat.src)) {
+        floaty.src = hat.src;
+        floaty.alt = hat.alt;
+        floaty.title = hat.title;
     }
+	if (type === 'shelled-two' || type === 'tutorial'){
+		document.querySelector(".Overlay-Text-Line").className = "Overlay-Text-Line text"
+    }
+
     const text = params.get('text');
     if (text) {
         document.querySelector(".text").textContent = text;
