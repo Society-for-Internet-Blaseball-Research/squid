@@ -185,6 +185,12 @@ const hats = {
   'namerifeht':{
     contentType: "namerifeht"
   },
+  'namerifeht-ball':{
+    src: 'FK_Namerifeht.png',
+    alt: "A ball of crystal like flame with a bowtie",
+    title: "Namerifeht from Blaseball.com",
+    contentType: "namerifeht-ball"
+  },
 
   //Misc
   'ballclark': {
@@ -218,10 +224,10 @@ function onLoad() {
     }
 
     const text = params.get('text');
-    if (text && type !== 'namerifeht') {
+    if (text && !type.startsWith('namerifeht')) {
         document.querySelector(".text").textContent = text;
     }
-    else if (text && type === 'namerifeht'){
+    else if (text && type.startsWith('namerifeht')){
         document.querySelector(".text").innerHTML = text.split("").map(string=>`<span>${string}</span>`).join("");
     } else {
         setText();

@@ -317,11 +317,19 @@ filter: blur(2px);
   height: auto;
 }
 
-.namerifeht .text {
+.namerifeht-ball .floaty {
+  display: revert;
+  width: 48vh;
+  height: auto;
+  margin: auto;
+  max-width: 80vw;
+}
+
+.namerifeht .text, .namerifeht-ball .text {
   color: #ea5b23;
 }
 
-.namerifeht .text > *{
+.namerifeht .text > *, .namerifeht-ball .text > *{
   display: inline-block;
   transform: rotateY(180deg);
 }
