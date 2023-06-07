@@ -63,6 +63,10 @@ const text = [
         text: "also who are the data witches",
         weight: 10
     },
+    {
+        text: "<a href=https://github.com/Society-for-Internet-Blaseball-Research/squid>Read the Documentation</a>",
+        weight: 20
+    }
 ];
 
 const hats = {
@@ -223,6 +227,8 @@ function onLoad() {
         document.querySelector(".icon").innerHTML = "<video autoplay loop src=n.webm>"
     }
 
+    
+
     const text = params.get('text');
     if (text && !type.startsWith('namerifeht')) {
         document.querySelector(".text").textContent = text;
@@ -236,7 +242,7 @@ function onLoad() {
 
 function setText() {
     // console.log("Set Text");
-    document.querySelector(".text").textContent = textArray[
+    document.querySelector(".text").innerHTML = textArray[
         Math.floor(Math.random() * textArray.length)
     ];
     const rand = (Math.floor(Math.random() * 180) + 30) * 1000;
