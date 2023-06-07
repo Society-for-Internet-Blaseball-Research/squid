@@ -265,7 +265,7 @@ filter: blur(2px);
   max-width: 80vw;
 }
 .microphone .text {
-  color: pink
+  color: #f21364;
 }
 
 @font-face {
