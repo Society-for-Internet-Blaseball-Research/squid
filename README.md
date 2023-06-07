@@ -1,5 +1,5 @@
 # Usage
-[squid.sibr.dev](https://squid.sibr.dev) is a small site that allows you to create blaseball takeover messages. This is done through http queries. Your first quiery is prepended with a `?`, the following ones with an `&`. Text must be [URL Encoded](https://www.urlencoder.io/). For example: `http://localhost:8000/?type=lootcrates&text=this%20is%20an%20example`
+[squid.sibr.dev](https://squid.sibr.dev) is a small site that allows you to create blaseball takeover messages. This is done through http queries. Your first quiery is prepended with a `?`, the following ones with an `&`. Text must be [URL Encoded](https://www.urlencoder.io/). For example: `https://squid.sibr.dev/?type=lootcrates&text=this%20is%20an%20example`
 
 To set the entity, use the query `type`. See [The List Below](#types) for avalible types. 
 To set the text, use the query `text`. This must be [URL Encoded](https://www.urlencoder.io/). 
