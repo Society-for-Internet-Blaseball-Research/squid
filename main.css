@@ -9,6 +9,7 @@ body {
     text-align: center;
     font-family:"Lora","Courier New",monospace,serif;
     font-weight:700;
+    font-size: 32px;
 }
 
 .content {
@@ -65,33 +66,22 @@ body {
 
 .icon {
     display: none;
+    width: 48vh;
+    height: auto;
+    margin: auto;
+    max-width: 80vw
 }
 
-.coin .icon,
-.scattered .icon {
+.coin .floaty, .scattered .floaty, .melting .floaty {
   display: revert;
   width: 48vh;
-  height: 48vh;
+  height: auto;
   margin: auto;
   max-width: 80vw;
 }
 
-.coin .icon {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
-}
-
-.scattered .icon {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/-quit-.7b42c9fb.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
-}
-
 .coin .text,
-.scattered .text {
+.scattered .text, .melting .text {
   color: #ffbe00;
   line-height: 1.2em;
   font-size: 48px;
@@ -265,4 +255,73 @@ filter: blur(2px);
     font-size: 24px;
     color: #ff5353;
     line-height: 24px;
+}
+
+.microphone .floaty, .microphone-tweet .floaty {
+  display: revert;
+  width: 48vh;
+  height: auto;
+  margin: auto;
+  max-width: 80vw;
+}
+.microphone .text {
+  color: pink
+}
+
+@font-face {
+  font-family: chirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2);
+}
+
+.microphone-tweet .text {
+  color: white;
+  font-size: 1.2em;
+  font-family: chirp;
+}
+
+
+.reader .floaty {
+  display: revert;
+  width: 48vh;
+  height: auto;
+  margin: auto;
+  max-width: 80vw;
+}
+.reader .text {
+  color:#a16dc3;
+  text-shadow: 0 0 10px #a16dc3;
+}
+
+.lootcrates .floaty {
+  display: revert;
+  width: 48vh;
+  height: auto;
+  margin: auto;
+  max-width: 80vw;
+}
+.lootcrates .text {
+  color: #b3b3b3;
+  font-style: italic;
+}
+
+.namerifeht .icon {
+  display: revert;
+  width: min-content;
+  height: auto;
+  margin: auto;
+}
+
+.namerifeht video {
+  width: 60vw;
+  max-width: 80ch;
+  height: auto;
+}
+
+.namerifeht .text {
+  color: #ea5b23;
+}
+
+.namerifeht .text > *{
+  display: inline-block;
+  transform: rotateY(180deg);
 }
